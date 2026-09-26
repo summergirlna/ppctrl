@@ -1,7 +1,7 @@
 package com.example.ppctrl.domain;
 
 /// PPチェックの実行結果
-public enum CheckStatus {
+public enum ResultStatus {
     OK(0),
     WARNING(1),
     NG(2),
@@ -9,7 +9,7 @@ public enum CheckStatus {
 
     private final int exitCode;
 
-    CheckStatus(int exitCode) {
+    ResultStatus(int exitCode) {
         this.exitCode = exitCode;
     }
 

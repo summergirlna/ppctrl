@@ -2,11 +2,11 @@ package com.example.ppctrl.domain;
 
 import java.util.Objects;
 
-public record CheckRequest(
+public record ActionRequest(
         String product,
         Action action
 ) {
-    public CheckRequest {
+    public ActionRequest {
         Objects.requireNonNull(product, "product must not be null");
         Objects.requireNonNull(action, "action must not be null");
 

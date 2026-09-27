@@ -4,5 +4,5 @@ import com.example.ppctrl.domain.ActionResult;
 
 public interface ActionResultFormatter {
 
-    String format(ActionResult result);
+  String format(ActionResult result);
 }

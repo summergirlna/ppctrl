@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class PPCtrlBeanConfig {
 
-    @Bean
-    ExecuteActionUseCase executeActionUseCase(ProductOperator productOperator) {
-        return new ExecuteActionUseCase(productOperator);
-    }
+  @Bean
+  ExecuteActionUseCase executeActionUseCase(ProductOperator productOperator) {
+    return new ExecuteActionUseCase(productOperator);
+  }
 }

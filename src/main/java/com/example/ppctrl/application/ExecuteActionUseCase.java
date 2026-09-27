@@ -9,10 +9,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ExecuteActionUseCase {
 
-    @NonNull
-    private final ProductOperator productOperator;
+  @NonNull private final ProductOperator productOperator;
 
-    public ActionResult execute(ActionRequest request) {
-        return productOperator.execute(request);
-    }
+  public ActionResult execute(ActionRequest request) {
+    return productOperator.execute(request);
+  }
 }

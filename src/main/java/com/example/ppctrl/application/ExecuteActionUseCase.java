@@ -12,7 +12,7 @@ public class ExecuteActionUseCase {
         this.productOperator = productOperator;
     }
 
-    public ActionResult check(ActionRequest request) {
-        return productOperator.check(request);
+    public ActionResult execute(ActionRequest request) {
+        return productOperator.execute(request);
     }
 }

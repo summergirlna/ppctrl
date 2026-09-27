@@ -4,6 +4,8 @@ import com.example.ppctrl.application.ExecuteActionUseCase;
 import com.example.ppctrl.domain.Action;
 import com.example.ppctrl.domain.ActionRequest;
 import com.example.ppctrl.domain.ActionResult;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -11,13 +13,11 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class CliRunner implements ApplicationRunner {
 
+    @NonNull
     private final ExecuteActionUseCase useCase;
-
-    public CliRunner(ExecuteActionUseCase useCase) {
-        this.useCase = useCase;
-    }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {

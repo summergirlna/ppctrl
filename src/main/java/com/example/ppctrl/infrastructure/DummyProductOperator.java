@@ -13,8 +13,7 @@ public class DummyProductOperator implements ProductOperator {
 
     @Override
     public ActionResult execute(ActionRequest request) {
-        Instant startedAt = Instant.now();
-        Instant endedAt = Instant.now();
+        Instant now = Instant.now();
 
         return new ActionResult(
                 request.product(),
@@ -22,8 +21,8 @@ public class DummyProductOperator implements ProductOperator {
                 "dummy",
                 ResultStatus.OK,
                 "Dummy action completed.",
-                startedAt,
-                endedAt
+                now,
+                now
         );
     }
 }

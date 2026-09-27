@@ -28,6 +28,6 @@ public record ActionResult(
     }
 
     public int exitCode() {
-        return status.exitCode();
+        return status.getExitCode();
     }
 }

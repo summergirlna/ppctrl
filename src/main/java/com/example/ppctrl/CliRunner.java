@@ -4,6 +4,7 @@ import com.example.ppctrl.application.ExecuteActionUseCase;
 import com.example.ppctrl.domain.Action;
 import com.example.ppctrl.domain.ActionRequest;
 import com.example.ppctrl.domain.ActionResult;
+import com.example.ppctrl.presentation.output.ActionResultFormatter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
@@ -19,6 +20,9 @@ public class CliRunner implements ApplicationRunner {
     @NonNull
     private final ExecuteActionUseCase useCase;
 
+    @NonNull
+    private final ActionResultFormatter formatter;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         String product = requiredOption(args, "product");
@@ -28,7 +32,7 @@ public class CliRunner implements ApplicationRunner {
                 new ActionRequest(product, new Action(action))
         );
 
-        System.out.println(result);
+        System.out.println(formatter.format(result));
     }
 
     private String requiredOption(ApplicationArguments args, String name) {
